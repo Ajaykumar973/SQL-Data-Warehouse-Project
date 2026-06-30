@@ -18,7 +18,7 @@ The data warehouse follows the **Medallion Architecture**, consisting of three l
 
 ##  Solution Architecture
 
-![SQL Data Warehouse Architecture]( DWH_Architecture.png)
+![SQL Data Warehouse Architecture](DWH_Architecture.png)
 
 ---
 
