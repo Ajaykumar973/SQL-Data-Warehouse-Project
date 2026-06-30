@@ -6,7 +6,7 @@ An end-to-end **SQL Data Warehouse** built using **Microsoft SQL Server**, imple
 
 ## 📊 Solution Architecture
 
-![SQL Data Warehouse Architecture](DWH_Architecture.png)
+![SQL Data Warehouse Architecture](DWH_Architecture)
 
 The system is designed using a layered architecture that separates raw ingestion, data transformation, and business-ready reporting data. This ensures scalability, maintainability, and high data quality.
 
