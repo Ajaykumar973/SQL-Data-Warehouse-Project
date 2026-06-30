@@ -177,12 +177,15 @@ This solution enables organizations to:
 
 ---
 
-##  Solution Architecture
+### 📊 Architecture Diagram
 
-![SQL Data Warehouse Architecture]()
+![SQL Data Warehouse Architecture](DWH_Architecture.png)
 
 ---
 
+The system follows the Medallion Architecture (Bronze, Silver, Gold), where data flows from raw ingestion to business-ready datasets.
+
+---
 ##  Future Enhancements
 
 - Incremental Data Loading
