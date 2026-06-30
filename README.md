@@ -1,110 +1,113 @@
-#  SQL Data Warehouse Project
+# 🏗️ SQL Data Warehouse Project
 
-A modern **SQL Data Warehouse** solution built using **Microsoft SQL Server** that implements the **Medallion Architecture (Bronze, Silver, and Gold layers)**. This project demonstrates an end-to-end ETL pipeline that ingests raw data from multiple business systems, transforms it into standardized datasets, and delivers business-ready data for analytics and reporting.
-
----
-
-##  Project Overview
-
-The objective of this project is to design and implement a scalable, maintainable, and efficient data warehouse capable of supporting business intelligence and analytical workloads.
-
-The solution follows a layered architecture that separates raw ingestion, data transformation, and business presentation, ensuring high data quality, simplified maintenance, and improved reporting performance.
+An end-to-end **SQL Data Warehouse** built using **Microsoft SQL Server**, implementing the **Medallion Architecture (Bronze, Silver, Gold layers)** to transform raw data into business-ready insights for analytics and reporting.
 
 ---
 
-##  Architecture
-
-The data warehouse follows the **Medallion Architecture**, consisting of three logical layers.
-
-### 📊 Architecture Diagram
+## 📊 Solution Architecture
 
 ![SQL Data Warehouse Architecture](DWH_Architecture.png)
 
----
-
-The system follows the Medallion Architecture (Bronze, Silver, Gold), where data flows from raw ingestion to business-ready datasets.
+The system is designed using a layered architecture that separates raw ingestion, data transformation, and business-ready reporting data. This ensures scalability, maintainability, and high data quality.
 
 ---
 
-###  Bronze Layer – Raw Data
+## 🏛️ Architecture Overview
 
-The Bronze layer serves as the landing zone for source data.
+The data warehouse follows the **Medallion Architecture**, consisting of three logical layers:
 
-**Responsibilities**
+### 🥉 Bronze Layer – Raw Data
 
-- Load raw data from CRM and ERP systems
-- Preserve source data without modification
-- Support full data refresh
-- Store historical raw records
+The Bronze layer acts as the landing zone for all incoming raw data from source systems.
 
-**Objects**
+#### Responsibilities
+- Load raw data from CRM and ERP systems  
+- Preserve data in its original format  
+- Support full data refresh loads  
+- Store historical raw data without transformation  
 
-- Tables
-- Stored Procedures
-
----
-
-###  Silver Layer – Cleaned & Standardized Data
-
-The Silver layer transforms raw data into a clean, consistent, and reliable format.
-
-**Transformations**
-
-- Data cleansing
-- Data standardization
-- Data normalization
-- Data enrichment
-- Derived columns
-- Data validation
-
-**Objects**
-
-- Tables
-- Stored Procedures
+#### Objects
+- Tables  
+- Stored Procedures  
 
 ---
 
-###  Gold Layer – Business Data
+### 🥈 Silver Layer – Cleaned & Standardized Data
 
-The Gold layer provides curated datasets optimized for analytics and reporting.
+The Silver layer processes and transforms raw data into a clean and consistent format.
 
-**Responsibilities**
+#### Responsibilities
+- Data cleansing and standardization  
+- Handling missing values and duplicates  
+- Data validation and quality checks  
+- Applying business rules and transformations  
 
-- Business logic implementation
-- Data integration
-- Aggregations
-- Analytical modeling
-
-**Objects**
-
-- Views
-- Fact Tables
-- Dimension Tables
-- Star Schema
+#### Objects
+- Tables  
+- Stored Procedures  
 
 ---
 
-##  Data Pipeline
+### 🥇 Gold Layer – Business Data
+
+The Gold layer contains business-ready, analytics-optimized datasets.
+
+#### Responsibilities
+- Data modeling for analytics  
+- Aggregations and KPI creation  
+- Business logic implementation  
+- Reporting-ready datasets  
+
+#### Objects
+- Fact Tables  
+- Dimension Tables  
+- Views  
+- Star Schema  
+
+---
+
+## 🔄 Data Flow
 
 ```text
-CSV Files (CRM / ERP)
-          │
-          ▼
+CRM / ERP Sources
+        ↓
 Bronze Layer (Raw Data)
-          │
-          ▼
-Silver Layer (Cleaned & Standardized Data)
-          │
-          ▼
-Gold Layer (Business-Ready Data)
-          │
-          ▼
-BI Dashboards • SQL Analytics • Machine Learning
+        ↓
+Silver Layer (Cleaned Data)
+        ↓
+Gold Layer (Business Data)
+        ↓
+BI Tools / SQL Analysis / Reporting
 ```
 
 ---
 
-##  Project Structure
+## 🛠️ Technologies Used
+
+- Microsoft SQL Server  
+- SQL (T-SQL)  
+- SQL Server Management Studio (SSMS)  
+- Stored Procedures  
+- Views  
+- ETL Concepts  
+- Data Warehousing Principles  
+- Star Schema Modeling  
+
+---
+
+## ✨ Key Features
+
+- End-to-end ETL pipeline  
+- Medallion architecture implementation  
+- Multi-source data ingestion (CRM & ERP)  
+- Data cleansing & transformation layers  
+- Business-ready reporting model  
+- Scalable warehouse design  
+- Star schema-based modeling  
+
+---
+
+## 📂 Project Structure
 
 ```text
 SQL-Data-Warehouse/
@@ -117,88 +120,44 @@ SQL-Data-Warehouse/
 │   ├── bronze/
 │   ├── silver/
 │   ├── gold/
-│   └── stored_procedures/
 │
 ├── docs/
-│   └── architecture.png
+│   └── DWH_Architecture.png
 │
 └── README.md
 ```
 
 ---
 
-##  Technologies Used
+## 📈 Business Value
 
-- Microsoft SQL Server
-- SQL
-- SQL Server Management Studio (SSMS)
-- Stored Procedures
-- Views
-- ETL Processes
-- Data Warehousing
-- Star Schema Modeling
+This data warehouse enables organizations to:
 
----
-
-##  Key Features
-
-- End-to-End ETL Pipeline
-- Multi-Source Data Integration
-- Layered Medallion Architecture
-- Automated Data Loading
-- Data Cleansing & Validation
-- Business Logic Implementation
-- Star Schema Design
-- Business-Ready Reporting Layer
+- Centralize enterprise data  
+- Improve data quality and consistency  
+- Enable faster reporting and analytics  
+- Support data-driven decision making  
+- Build scalable BI solutions  
 
 ---
 
-## 📊 Business Value
+## 🚀 Future Enhancements
 
-This solution enables organizations to:
-
-- Centralize enterprise data
-- Improve data quality and consistency
-- Reduce reporting complexity
-- Deliver trusted datasets for analytics
-- Support business intelligence initiatives
-- Enable scalable reporting and decision-making
+- Incremental data loading  
+- Change Data Capture (CDC)  
+- Automated ETL pipelines (SQL Agent)  
+- Power BI dashboard integration  
+- Cloud migration (Azure Synapse / ADF)  
 
 ---
 
-##  Use Cases
-
-- Business Intelligence
-- Executive Dashboards
-- Ad-Hoc SQL Analysis
-- Data Analytics
-- KPI Reporting
-- Machine Learning
-
----
-
-### 📊 Architecture Diagram
-
-![SQL Data Warehouse Architecture](DWH_Architecture.png)
-
----
-
-The system follows the Medallion Architecture (Bronze, Silver, Gold), where data flows from raw ingestion to business-ready datasets.
-
----
-##  Future Enhancements
-
-- Incremental Data Loading
-- Change Data Capture (CDC)
-- SQL Server Agent Automation
-- Power BI Dashboard Integration
-- Data Quality Monitoring
-- Azure Data Factory Integration
-- Azure Synapse Analytics Migration
-
----
-
-##  Author
+## 👨‍💻 Author
 
 **Ajay Kumar**
 
+- GitHub: https://github.com/yourusername  
+- LinkedIn: https://linkedin.com/in/yourprofile  
+
+---
+
+⭐ If you found this project useful, don’t forget to star the repository!
