@@ -16,11 +16,15 @@ The solution follows a layered architecture that separates raw ingestion, data t
 
 The data warehouse follows the **Medallion Architecture**, consisting of three logical layers.
 
-## 🏛️ Solution Architecture
+### 📊 Architecture Diagram
 
-![Architecture Diagram](architecture.png)
+![SQL Data Warehouse Architecture](DWH_Architecture.png)
 
-The system follows Medallion Architecture (Bronze, Silver, Gold)...
+---
+
+The system follows the Medallion Architecture (Bronze, Silver, Gold), where data flows from raw ingestion to business-ready datasets.
+
+---
 
 ###  Bronze Layer – Raw Data
 
