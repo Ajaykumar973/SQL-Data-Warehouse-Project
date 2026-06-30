@@ -2,6 +2,11 @@
 
 An end-to-end **SQL Data Warehouse** built using **Microsoft SQL Server**, implementing the **Medallion Architecture (Bronze, Silver, Gold layers)** to transform raw data into business-ready insights for analytics and reporting.
 
+
+
+## 🏛️ Architecture Overview
+
+The data warehouse follows the **Medallion Architecture**, consisting of three logical layers:
 ---
 
 ## 📊 Solution Architecture
@@ -11,10 +16,6 @@ An end-to-end **SQL Data Warehouse** built using **Microsoft SQL Server**, imple
 The system is designed using a layered architecture that separates raw ingestion, data transformation, and business-ready reporting data. This ensures scalability, maintainability, and high data quality.
 
 ---
-
-## 🏛️ Architecture Overview
-
-The data warehouse follows the **Medallion Architecture**, consisting of three logical layers:
 
 ### 🥉 Bronze Layer – Raw Data
 
